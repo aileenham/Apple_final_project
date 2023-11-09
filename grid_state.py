@@ -27,9 +27,9 @@ class GameBoard:
 
         if guess in self.items:
             self.items.remove(guess)
-            self.grid[row][col] = 'X'  # Mark the item as found
+            self.grid[row][col] = 'X'  
         else:
-            self.grid[row][col] = 'O'  # Mark the guess as a miss
+            self.grid[row][col] = 'O'  
 
     def __str__(self):
         """
@@ -50,10 +50,10 @@ class GameBoard:
 
         return game_state
 
-# Example of using the GameBoard class
-difficulty = "hard"  # Change to "easy" for an 8x8 grid
+
+difficulty = "hard"  
 game = GameBoard(difficulty)
 
-print(game)  # Provide a string representation of the game board
-game.grid_state((1, 2))  # Update the game board with a guess
-print(game)  # Provide the updated string representation
+print(game) 
+game.grid_state((1, 2))  
+print(game) 
